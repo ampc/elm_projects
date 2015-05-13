@@ -1,0 +1,9 @@
+examples/release/
+examples/soundcloud_api_key.js
+build/
+cache/
+*.elmi
+*.elmo
+*.swp
+elm-stuff
+elm.js
