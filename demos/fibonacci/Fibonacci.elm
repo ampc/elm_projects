@@ -2,6 +2,7 @@ module Fibonacci where
 
 
 import List exposing (..)
+import Maybe exposing (..)
 
 fibonacci : Int -> List Int
 fibonacci goal =
@@ -12,9 +13,10 @@ fibonacci goal =
    in
        fibonacci1 0 1 0 []
 
-teste :  List Int -> Int
-teste [] = 0
-teste [x] = last [x]
+teste : Int -> Int
+teste n = reverse(fibonacci n) |> head |> withDefault 0
+
+
 
 fibonacciWithIndexes : Int -> List (Int,Int)
 fibonacciWithIndexes n = map2 (,) [0..n] (fibonacci n)
